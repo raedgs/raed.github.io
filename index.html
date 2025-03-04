@@ -3,101 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raed Guesmi | Cybersecurity Engineer</title>
+    <title>Raed Guesmi - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
+            background-size: cover;
+            background-position: center;
+            position: relative;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #0d0d0d;
-            color: #fff;
-            text-align: center;
+            color: #ffffff;
+            animation: fadeIn 2s ease-in-out;
         }
-        header {
-            padding: 30px;
-            background: #111;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .top-right-image {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 80px;
+            height: auto;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
         .profile-photo {
-            width: 120px;
+            display: block;
+            margin: 20px auto;
+            width: 150px;
             border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
         }
-        nav {
-            background: #222;
-            padding: 10px 0;
+        .profile-photo:hover {
+            transform: scale(1.1);
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
+        header {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .section {
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .taskbar ul {
             display: flex;
             justify-content: center;
+            list-style: none;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
         }
-        nav ul li {
+        .taskbar ul li {
             margin: 0 15px;
         }
-        nav ul li a {
-            color: #fff;
+        .taskbar ul li a {
+            color: #ffffff;
             text-decoration: none;
-            font-weight: bold;
+            transition: color 0.3s;
         }
-        section {
-            padding: 50px 20px;
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
-        }
-        h2 {
-            border-bottom: 2px solid #1db954;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
-        footer {
-            background: #111;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .cert-photo {
-            width: 50px;
-            vertical-align: middle;
+        .taskbar ul li a:hover {
+            color: #00ffcc;
         }
     </style>
 </head>
-<body>
+<body class="dark-mode">
+    <img src="https://wallpapers.com/images/hd/64k-ultra-hd-hacker-anonymous-v-glowing-b4l4tj9di301vfa8.jpg" alt="Top Right Image" class="top-right-image">
     <header>
         <img src="cyber.png" alt="Raed Guesmi" class="profile-photo">
         <h1>Raed Guesmi</h1>
         <p>Cybersecurity Engineer & Penetration Tester</p>
     </header>
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
-    <section id="about">
+    <section id="about" class="section">
         <h2>About Me</h2>
         <p>Experienced cybersecurity engineer with expertise in penetration testing, network security, and ethical hacking. Passionate about security hardening, vulnerability assessments, and building secure infrastructures.</p>
     </section>
-    <section id="experience">
+    <section id="experience" class="section">
         <h2>Experience</h2>
         <ul>
-            <li><strong>SFM Technologies - Tunis</strong> - Penetration Tester (Feb 2024 - Aug 2024)</li>
-            <li><strong>Next Step - Tunis</strong> - Cybersecurity Analyst (Jun 2023 - Aug 2023)</li>
-            <li><strong>GreenTech - Berlin (Remote)</strong> - Developer & Web Pentester (Feb 2023 - Jun 2023)</li>
+            <li><strong>SFM Technologies - Tunis </strong> - Penetration Tester (Feb 2024 - Aout 2024)</li>
+            <li><strong>Next Step -Tunis</strong> - Cybersecurity Analyst  (Juin 2023 - Aout 2023 )</li>
+            <li><strong>GreenTech - Berlin (Remote ) </strong> - Developer and Web Pentest  (Feb 2023 - Juin 2023 )</li>
         </ul>
     </section>
-    <section id="certifications">
+    <section id="certifications" class="section">
         <h2>Certifications</h2>
         <ul>
-            <li><img src="ejpt.png" alt="eJPT Certification" class="cert-photo"> eJPT (Junior Penetration Tester)</li>
+            <li><img src="ejpt.png" alt="eJPT Certification" class="cert-photo" style="width: 50px;"> eJPT (Junior Penetration Tester)</li>
             <li>Cisco Ethical Hacking, Network Attack & Defense</li>
-            <li><img src="ecppt.png" alt="eCPPT Certification" class="cert-photo"> Professional Penetration Tester</li>
+            <li><img src="ecppt.png" alt="eCPPT Certification" class="cert-photo" style="width: 50px;"> Professional Penetration Tester</li>
         </ul>
     </section>
-    <section id="projects">
+    <section id="projects" class="section">
         <h2>Projects</h2>
         <ul>
             <li><strong>Fortilearn</strong> - A cybersecurity platform with labs and challenges for penetration testing.</li>
@@ -105,34 +105,38 @@
             <li><strong>Cybersecurity Education Platform</strong> - Developed a CTF-based training and hiring solution.</li>
         </ul>
     </section>
-    <section id="education">
+    <section id="education" class="section">
         <h2>Education</h2>
         <ul>
             <li>Bachelor's Degree in Cybersecurity - ESPRIT</li>
         </ul>
     </section>
-    <section id="contact">
+    <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Email: raed.guesmi@example.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/raedguesmi" target="_blank">linkedin.com/in/raedguesmi</a></p>
-        <p>GitHub: <a href="https://github.com/raedguesmi" target="_blank">github.com/raedguesmi</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/raedguesmi">linkedin.com/in/raedguesmi</a></p>
+        <p>GitHub: <a href="https://github.com/raedguesmi">github.com/raedguesmi</a></p>
     </section>
     <footer>
         <p>&copy; 2025 Raed Guesmi. All rights reserved.</p>
     </footer>
+    <div class="taskbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
     <script>
-        // Background images rotation
         const images = [
             'https://wallpapers.com/images/hd/64k-ultra-hd-hacker-anonymous-v-glowing-b4l4tj9di301vfa8.jpg',
-            'https://your-second-image.jpg',
-            'https://your-third-image.jpg'
+            'https://path/to/your/second-image.jpg',
+            'https://path/to/your/third-image.jpg'
         ];
         function changeBackgroundImage() {
             const randomImage = images[Math.floor(Math.random() * images.length)];
             document.body.style.backgroundImage = `url(${randomImage})`;
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundAttachment = "fixed";
         }
         setInterval(changeBackgroundImage, 1800000);
         changeBackgroundImage();
