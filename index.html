@@ -24,7 +24,7 @@
         <ul>
             <li><strong>SFM Technologies - Tunis </strong> - Penetration Tester (Feb 2024 - Aout 2024)</li>
             <li><strong>Next Step -Tunis</strong> - Cybersecurity Analyst  (Juin 2023 - Aout 2023 )
-              <li><strong>GreenTech - Berlin (Remote ) </strong> - Devolopper and Web Pentest  (Feb 2023 - Juin 2023 )
+              <li><strong>GreenTech - Berlin (Remote ) </strong> - Developer and Web Pentest  (Feb 2023 - Juin 2023 )
             </li>
           
         </ul>
@@ -33,9 +33,8 @@
         <h2>Certifications</h2>
         <ul>
             <li><img src="ejpt.png" alt="eJPT Certification" class="cert-photo" style="width: 50px;"> eJPT (Junior Penetration Tester)</li>
-<li>Cisco Ethical Hacking, Network Attack & Defense</li>
-<li><img src="ecppt.png" alt="eCPPT Certification" class="cert-photo" style="width: 50px;">Proffesional Penetration Tester</li>
-
+            <li>Cisco Ethical Hacking, Network Attack & Defense</li>
+            <li><img src="ecppt.png" alt="eCPPT Certification" class="cert-photo" style="width: 50px;">Professional Penetration Tester</li>
         </ul>
     </section>
     <section id="projects">
@@ -71,5 +70,27 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
+
+    <!-- JavaScript to change background image every 30 minutes -->
+    <script>
+        // Array of background images
+        const images = [
+            'https://wallpapers.com/images/hd/64k-ultra-hd-hacker-anonymous-v-glowing-b4l4tj9di301vfa8.jpg',
+            'https://path/to/your/second-image.jpg',  // Add another image URL
+            'https://path/to/your/third-image.jpg'   // Add another image URL
+        ];
+
+        // Function to change the background image
+        function changeBackgroundImage() {
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            document.body.style.backgroundImage = `url(${randomImage})`;
+        }
+
+        // Set interval to change the background image every 30 minutes (1800000 ms)
+        setInterval(changeBackgroundImage, 1800000);
+
+        // Change the background immediately on page load
+        changeBackgroundImage();
+    </script>
 </body>
 </html>
