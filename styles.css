@@ -8,9 +8,9 @@ body {
     overflow-x: hidden;
     height: 100%; /* Allow the page to expand vertically */
     position: relative;
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.giphy.com/media/xT9Igpn9NOMbffJp9Y/giphy.gif'); /* Optional: Matrix-style GIF */
-    background-size: 100% 100%; /* Adjust the size of the GIF to cover the background */
-    background-position: center;
+    background-image: url('https://wallpapers.com/images/hd/64k-ultra-hd-hacker-anonymous-v-glowing-b4l4tj9di301vfa8.jpg'); /* Set your custom image here */
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: center; /* Center the background image */
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
     animation: matrix 30s infinite linear; /* Slower matrix-like effect */
 }
@@ -29,7 +29,7 @@ body {
 header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #212121; /* Darker header background */
+    background-color: rgba(33, 33, 33, 0.8); /* Darker header background with transparency */
     border-bottom: 2px solid #444; /* Subtle border */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
@@ -55,7 +55,7 @@ p {
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background for the nav with transparency */
     border-bottom: 2px solid #444; /* Subtle border for the nav */
 }
 
@@ -88,7 +88,7 @@ nav ul li a:hover {
 section {
     padding: 40px 20px;
     margin: 30px 0;
-    background-color: #222; /* Darker background for sections */
+    background-color: rgba(34, 34, 34, 0.8); /* Darker background for sections with transparency */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 64, 129, 0.3); /* Soft glow around sections */
 }
