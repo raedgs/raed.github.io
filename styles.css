@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    position: relative;
 }
 
 /* Header and Profile Section */
@@ -139,15 +140,17 @@ code, .code-section {
         background-position: 0 0;
     }
     100% {
-        background-position: 100% 100%;
+        background-position: 0 100%;
     }
 }
 
-/* Adding subtle Matrix-like background animation */
+/* Adding Matrix Text Effect */
 body {
+    background: #000;
     background-image: url('https://media.giphy.com/media/xT9Igpn9NOMbffJp9Y/giphy.gif'); /* Optional: Matrix-style GIF */
     background-size: cover;
     animation: matrix 15s infinite linear;
+    overflow: hidden;
 }
 
 /* Footer */
