@@ -1,23 +1,46 @@
+/* General Styles */
 body {
     background-color: #121212; /* Dark background */
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for a code effect */
+    margin: 0;
+    padding: 0;
 }
 
+/* Header and Profile Section */
 header {
     text-align: center;
     padding: 20px;
+    border-bottom: 2px solid #00ff00; /* Glowing border effect */
 }
 
 .profile-photo {
     width: 150px;
     border-radius: 50%;
+    border: 2px solid #00ff00; /* Green border for a neon effect */
+    box-shadow: 0 0 15px #00ff00;
 }
 
+/* Neon Glow Effect for Text */
+h1, p {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+}
+
+h2 {
+    color: #ff6347; /* Tomato color for section headings */
+    text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347;
+}
+
+/* Navigation Bar */
 nav ul {
     display: flex;
     justify-content: center;
     gap: 15px;
+    background-color: #333;
+    padding: 15px 0;
+    margin: 0;
+    border-top: 2px solid #00ff00; /* Glowing top border */
 }
 
 nav ul li {
@@ -27,11 +50,32 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
 }
 
+/* Hover Effects */
+nav ul li a:hover {
+    color: #ff6347;
+    text-shadow: 0 0 15px #ff6347;
+}
+
+/* Sections */
 section {
     padding: 20px;
     margin: 20px 0;
+    background-color: #222;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -49,6 +93,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    border-top: 2px solid #00ff00; /* Glowing border at the top of the taskbar */
 }
 
 .taskbar ul {
@@ -65,9 +110,38 @@ footer {
     color: #fff;
     text-decoration: none;
     font-size: 1.1em;
+    transition: all 0.3s ease;
 }
 
-/* Optional: Add hover effect */
-nav ul li a:hover, .taskbar ul li a:hover {
-    color: #4CAF50;
+.taskbar ul li a:hover {
+    color: #ff6347;
+    text-shadow: 0 0 15px #ff6347;
 }
+
+/* Code Background Effect */
+code, .code-section {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 10px #00ff00;
+    margin-top: 10px;
+}
+
+/* Add a Matrix Effect as Background Animation */
+@keyframes matrix {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    background-image: url('https://media.giphy.com/media/xT9Igpn9NOMbffJp9Y/giphy.gif'); /* Optional: Matrix animation gif as background */
+    background-size: cover;
+    animation: matrix 10s infinite linear;
+}
+
