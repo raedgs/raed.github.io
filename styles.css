@@ -6,7 +6,23 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    height: 100%; /* Allow the page to expand vertically */
     position: relative;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.giphy.com/media/xT9Igpn9NOMbffJp9Y/giphy.gif'); /* Optional: Matrix-style GIF */
+    background-size: 100% 100%; /* Adjust the size of the GIF to cover the background */
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    animation: matrix 30s infinite linear; /* Slower matrix-like effect */
+}
+
+/* Matrix Background Effect */
+@keyframes matrix {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 /* Header and Profile Section */
@@ -132,25 +148,6 @@ code, .code-section {
 .taskbar ul li a:hover {
     color: #ff4081;
     text-shadow: 0 0 8px rgba(255, 64, 129, 0.8);
-}
-
-/* Matrix Background Effect */
-@keyframes matrix {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 100%;
-    }
-}
-
-/* Adding Matrix Text Effect */
-body {
-    background: #000;
-    background-image: url('https://media.giphy.com/media/xT9Igpn9NOMbffJp9Y/giphy.gif'); /* Optional: Matrix-style GIF */
-    background-size: cover;
-    animation: matrix 15s infinite linear;
-    overflow: hidden;
 }
 
 /* Footer */
