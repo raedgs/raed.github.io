@@ -1,0 +1,73 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+/* Taskbar Styles */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.taskbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.taskbar ul li {
+    list-style: none;
+}
+
+.taskbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* Optional: Add hover effect */
+nav ul li a:hover, .taskbar ul li a:hover {
+    color: #4CAF50;
+}
