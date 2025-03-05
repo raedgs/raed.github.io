@@ -10,123 +10,62 @@
             background-image: url('https://wallpapers.com/images/hd/64k-ultra-hd-hacker-anonymous-v-glowing-b4l4tj9di301vfa8.jpg');
             background-size: cover;
             background-position: center;
-            position: relative;
             font-family: Arial, sans-serif;
             color: #ffffff;
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .top-right-image {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 80px;
-            height: auto;
-            animation: slideIn 1.5s ease-in-out;
-        }
-        @keyframes slideIn {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        .profile-photo {
-            display: block;
-            margin: 20px auto;
-            width: 150px;
-            border-radius: 50%;
-            transition: transform 0.3s ease-in-out;
-        }
-        .profile-photo:hover {
-            transform: scale(1.1);
-        }
-        header {
             text-align: center;
-            animation: fadeIn 2s ease-in-out;
         }
-        .section {
+        .container {
+            width: 80%;
+            margin: auto;
             padding: 20px;
-            animation: fadeIn 1.5s ease-in-out;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: opacity 0.5s ease-in-out;
         }
-        .taskbar ul {
+        .taskbar {
             display: flex;
             justify-content: center;
             list-style: none;
             padding: 10px;
             background: rgba(0, 0, 0, 0.7);
         }
-        .taskbar ul li {
+        .taskbar li {
             margin: 0 15px;
-        }
-        .taskbar ul li a {
+            cursor: pointer;
             color: #ffffff;
-            text-decoration: none;
             transition: color 0.3s;
         }
-        .taskbar ul li a:hover {
+        .taskbar li:hover {
             color: #00ffcc;
         }
     </style>
+    <script>
+        function showContent(section) {
+            const content = {
+                about: `<h2>About Me</h2><p>Experienced cybersecurity engineer with expertise in penetration testing...</p>` ,
+                experience: `<h2>Experience</h2><ul><li><strong>SFM Technologies</strong> - Penetration Tester (Feb 2024 - Aout 2024)</li> <li><strong>Next Step</strong> - Cybersecurity Analyst (Juin 2023 - Aout 2023)</li></ul>` ,
+                projects: `<h2>Projects</h2><ul><li><strong>Fortilearn</strong> - A cybersecurity platform with labs...</li></ul>` ,
+                contact: `<h2>Contact</h2><p>Email: raed.guesmi@example.com</p><p>LinkedIn: <a href='https://linkedin.com/in/raedguesmi'>linkedin.com/in/raedguesmi</a></p>`
+            };
+            document.getElementById("content").innerHTML = content[section];
+        }
+    </script>
 </head>
-<body class="dark-mode">
+<body>
     <header>
         <img src="cyber.png" alt="Raed Guesmi" class="profile-photo">
         <h1>Raed Guesmi</h1>
         <p>Cybersecurity Engineer & Penetration Tester</p>
     </header>
-    <nav>
-    </nav>
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Experienced cybersecurity engineer with expertise in penetration testing, network security, and ethical hacking. Passionate about security hardening, vulnerability assessments, and building secure infrastructures.</p>
-    </section>
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>SFM Technologies - Tunis </strong> - Penetration Tester (Feb 2024 - Aout 2024)</li>
-            <li><strong>Next Step -Tunis</strong> - Cybersecurity Analyst  (Juin 2023 - Aout 2023 )</li>
-            <li><strong>GreenTech - Berlin (Remote ) </strong> - Developer and Web Pentest  (Feb 2023 - Juin 2023 )</li>
-        </ul>
-    </section>
-    <section id="certifications" class="section">
-        <h2>Certifications</h2>
-        <ul>
-            <li><img src="ejpt.png" alt="eJPT Certification" class="cert-photo" style="width: 50px;"> eJPT (Junior Penetration Tester)</li>
-            <li>Cisco Ethical Hacking, Network Attack & Defense</li>
-            <li><img src="ecppt.png" alt="eCPPT Certification" class="cert-photo" style="width: 50px;"> Professional Penetration Tester</li>
-        </ul>
-    </section>
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Fortilearn</strong> - A cybersecurity platform with labs and challenges for penetration testing.</li>
-            <li><strong>Web & Network Pentesting</strong> - Conducted security assessments on corporate infrastructure.</li>
-            <li><strong>Cybersecurity Education Platform</strong> - Developed a CTF-based training and hiring solution.</li>
-        </ul>
-    </section>
-    <section id="education" class="section">
-        <h2>Education</h2>
-        <ul>
-            <li>Bachelor's Degree in Cybersecurity - ESPRIT</li>
-        </ul>
-    </section>
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: raed.guesmi@example.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/raedguesmi">linkedin.com/in/raedguesmi</a></p>
-        <p>GitHub: <a href="https://github.com/raedguesmi">github.com/raedguesmi</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Raed Guesmi. All rights reserved.</p>
-    </footer>
-    <div class="taskbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <ul class="taskbar">
+        <li onclick="showContent('about')">About</li>
+        <li onclick="showContent('experience')">Experience</li>
+        <li onclick="showContent('projects')">Projects</li>
+        <li onclick="showContent('contact')">Contact</li>
+    </ul>
+    <div class="container" id="content">
+        <h2>Welcome</h2>
+        <p>Select a section to view more details.</p>
     </div>
 </body>
 </html>
