@@ -12,60 +12,63 @@
             background-position: center;
             font-family: Arial, sans-serif;
             color: #ffffff;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .taskbar {
             display: flex;
             justify-content: center;
-            list-style: none;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
-        .taskbar li {
-            margin: 0 15px;
+        .navigation {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+        .navigation div {
+            font-size: 24px;
+            margin: 10px 0;
             cursor: pointer;
-            color: #ffffff;
-            transition: color 0.3s;
+            transition: font-weight 0.3s;
         }
-        .taskbar li:hover {
-            color: #00ffcc;
+        .navigation div.active {
+            font-weight: bold;
+        }
+        .content {
+            width: 60%;
+            text-align: center;
+            margin-top: 20px;
+            transition: opacity 0.5s ease-in-out;
         }
     </style>
-    <script>
-        function showContent(section) {
-            const content = {
-                about: `<h2>About Me</h2><p>Experienced cybersecurity engineer with expertise in penetration testing...</p>` ,
-                experience: `<h2>Experience</h2><ul><li><strong>SFM Technologies</strong> - Penetration Tester (Feb 2024 - Aout 2024)</li> <li><strong>Next Step</strong> - Cybersecurity Analyst (Juin 2023 - Aout 2023)</li></ul>` ,
-                projects: `<h2>Projects</h2><ul><li><strong>Fortilearn</strong> - A cybersecurity platform with labs...</li></ul>` ,
-                contact: `<h2>Contact</h2><p>Email: raed.guesmi@example.com</p><p>LinkedIn: <a href='https://linkedin.com/in/raedguesmi'>linkedin.com/in/raedguesmi</a></p>`
-            };
-            document.getElementById("content").innerHTML = content[section];
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <img src="cyber.png" alt="Raed Guesmi" class="profile-photo">
-        <h1>Raed Guesmi</h1>
-        <p>Cybersecurity Engineer & Penetration Tester</p>
-    </header>
-    <ul class="taskbar">
-        <li onclick="showContent('about')">About</li>
-        <li onclick="showContent('experience')">Experience</li>
-        <li onclick="showContent('projects')">Projects</li>
-        <li onclick="showContent('contact')">Contact</li>
-    </ul>
-    <div class="container" id="content">
-        <h2>Welcome</h2>
-        <p>Select a section to view more details.</p>
+    <div class="navigation">
+        <div class="nav-item" data-section="about">About</div>
+        <div class="nav-item" data-section="experience">Experience</div>
+        <div class="nav-item" data-section="certifications">Certifications</div>
+        <div class="nav-item" data-section="projects">Projects</div>
+        <div class="nav-item" data-section="contact">Contact</div>
     </div>
+    <div class="content" id="content">
+        <h2>About Me</h2>
+        <p>Experienced cybersecurity engineer with expertise in penetration testing, network security, and ethical hacking.</p>
+    </div>
+    <script>
+        const sections = {
+            about: "<h2>About Me</h2><p>Experienced cybersecurity engineer with expertise in penetration testing, network security, and ethical hacking.</p>",
+            experience: "<h2>Experience</h2><ul><li><strong>SFM Technologies - Tunis</strong> - Penetration Tester (Feb 2024 - Aug 2024)</li><li><strong>Next Step - Tunis</strong> - Cybersecurity Analyst (June 2023 - Aug 2023)</li><li><strong>GreenTech - Berlin (Remote)</strong> - Developer and Web Pentest (Feb 2023 - June 2023)</li></ul>",
+            certifications: "<h2>Certifications</h2><ul><li>eJPT (Junior Penetration Tester)</li><li>Cisco Ethical Hacking, Network Attack & Defense</li><li>eCPPT (Professional Penetration Tester)</li></ul>",
+            projects: "<h2>Projects</h2><ul><li><strong>Fortilearn</strong> - A cybersecurity platform with labs and challenges for penetration testing.</li><li><strong>Web & Network Pentesting</strong> - Conducted security assessments on corporate infrastructure.</li><li><strong>Cybersecurity Education Platform</strong> - Developed a CTF-based training and hiring solution.</li></ul>",
+            contact: "<h2>Contact</h2><p>Email: raed.guesmi@example.com</p><p>LinkedIn: <a href='https://linkedin.com/in/raedguesmi'>linkedin.com/in/raedguesmi</a></p><p>GitHub: <a href='https://github.com/raedguesmi'>github.com/raedguesmi</a></p>",
+        };
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('content').innerHTML = sections[item.dataset.section];
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
