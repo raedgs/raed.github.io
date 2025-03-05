@@ -1,17 +1,17 @@
 /* General Styles */
 body {
-    background-color: #1a1a1a; /* Dark background for the overall page */
-    color: #f1f1f1; /* Light text color */
-    font-family: 'Roboto', sans-serif; /* Modern, readable font */
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 100%; /* Allow the page to expand vertically */
+    height: 100%;
     position: relative;
-    background-size: cover; /* Ensure the image covers the whole background */
-    background-position: center; /* Center the background image */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    animation: matrix 30s infinite linear; /* Slower matrix-like effect */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: matrix 30s infinite linear;
 }
 
 /* Matrix Background Effect */
@@ -25,128 +25,60 @@ body {
 }
 
 /* Header and Profile Section */
-header {
+.header {
     text-align: center;
     padding: 40px 20px;
-    background-color: rgba(33, 33, 33, 0.8); /* Darker header background with transparency */
-    border-bottom: 2px solid #444; /* Subtle border */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    background-color: rgba(33, 33, 33, 0.8);
+    border-bottom: 2px solid #444;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .profile-photo {
     width: 150px;
     border-radius: 50%;
-    border: 2px solid #ff4081; /* Pink accent border for profile image */
-    box-shadow: 0 0 10px rgba(255, 64, 129, 0.8); /* Soft glowing effect around image */
+    border: 2px solid #ff4081;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
 }
 
-/* Header text */
 h1 {
-    color: #ff4081; /* Soft pink color for the name */
-    text-shadow: 0 0 10px rgba(255, 64, 129, 0.8); /* Subtle glow effect */
+    color: #ff4081;
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
 }
 
 p {
     font-size: 1.2em;
-    color: #ccc; /* Lighter color for subtext */
+    color: #ccc;
     margin-top: 10px;
 }
 
 /* Navigation Bar */
-nav {
-    background-color: rgba(51, 51, 51, 0.8); /* Dark background for the nav with transparency */
-    border-bottom: 2px solid #444; /* Subtle border for the nav */
+.navigation {
+    background-color: rgba(51, 51, 51, 0.8);
+    border-bottom: 2px solid #444;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px 0;
-    margin: 0;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
+.navigation div {
+    font-size: 24px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: font-weight 0.3s;
     color: #f1f1f1;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: all 0.3s ease;
 }
 
-/* Hover Effects for Links */
-nav ul li a:hover {
-    color: #ff4081; /* Pink hover effect */
-    text-shadow: 0 0 8px rgba(255, 64, 129, 0.8); /* Glow effect on hover */
-}
-
-/* Sections */
-section {
-    padding: 40px 20px;
-    margin: 30px 0;
-    background-color: rgba(34, 34, 34, 0.8); /* Darker background for sections with transparency */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 64, 129, 0.3); /* Soft glow around sections */
-}
-
-/* List Items */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-/* Code Background and Effects */
-code, .code-section {
-    background-color: #121212; /* Very dark background for code blocks */
-    color: #e0e0e0; /* Light gray for code text */
-    padding: 20px;
-    border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    box-shadow: 0 0 10px rgba(255, 64, 129, 0.4);
-    margin-top: 10px;
-}
-
-/* Taskbar */
-.taskbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #222; /* Dark background for the taskbar */
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 2px solid #444;
-}
-
-.taskbar ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.taskbar ul li {
-    list-style: none;
-}
-
-.taskbar ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effects for Taskbar Links */
-.taskbar ul li a:hover {
+.navigation div.active {
+    font-weight: bold;
     color: #ff4081;
     text-shadow: 0 0 8px rgba(255, 64, 129, 0.8);
+}
+
+/* Content Section */
+.content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Footer */
@@ -160,12 +92,12 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
+    .navigation {
         flex-direction: column;
         gap: 10px;
     }
 
-    nav ul li a {
+    .navigation div {
         font-size: 1.5em;
     }
 }
