@@ -5,6 +5,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Navigation */
@@ -12,7 +13,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 50px;
     background: transparent;
     position: fixed;
     width: 100%;
@@ -21,7 +22,7 @@ nav {
 }
 .logo {
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
 }
 .logo span {
@@ -30,22 +31,31 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin: 0;
+    padding: 0;
 }
 nav ul li a {
     color: #f1f1f1;
     text-decoration: none;
+    font-size: 1.2em;
     transition: 0.3s;
 }
 nav ul li a:hover, .active {
     color: #0ff;
+    text-shadow: 0 0 10px #0ff;
 }
 .hire-btn {
     background: #0ff;
     color: #000;
-    padding: 8px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.hire-btn:hover {
+    background: #08f;
 }
 
 /* Hero Section */
@@ -54,35 +64,70 @@ nav ul li a:hover, .active {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    padding: 50px;
+    padding: 80px 10% 50px;
     text-align: left;
 }
 .hero-content {
     max-width: 50%;
+    text-align: left;
 }
 .hero h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin: 10px 0;
+    font-weight: bold;
 }
-.highlight {
+.hero .highlight {
     color: #0ff;
 }
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #ccc;
+    margin-bottom: 20px;
 }
-.btn {
+.download-btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: #0ff;
     color: #000;
     border-radius: 5px;
-    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.download-btn:hover {
+    background: #08f;
 }
 
 /* Hero Image */
+.hero-image {
+    position: relative;
+    display: inline-block;
+}
 .hero-image img {
-    width: 300px;
+    width: 350px;
     border-radius: 50%;
     border: 3px solid #0ff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 255, 255, 0.8);
+    top: -15px;
+    left: -15px;
+    animation: rotateCircle 8s linear infinite;
+}
+
+/* Animated Circular Border */
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
