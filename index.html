@@ -7,18 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Thunder & Lightning Preloader -->
     <div class="preloader">
         <div class="lightning"></div>
     </div>
 
-    <!-- Thunder Sound -->
     <audio id="thunderSound">
         <source src="thunder.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Main Portfolio -->
     <div class="main-content">
         <nav>
             <div class="logo">Raed<span class="highlight"> Guesmi</span></div>
@@ -29,37 +25,22 @@
                 <li><a href="#work">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#contact" class="hire-btn">Hire me</a>
         </nav>
-
+        
         <section class="hero">
-            <div class="hero-content">
-                <p>Cybersecurity Engineer</p>
-                <h2>
-                    Hello, I'm 
-                    <span class="glitch" data-text="Raed Guesmi">Raed Guesmi</span>
-                </h2>
-                <p>I specialize in cybersecurity, penetration testing, and network security.</p>
-                <a href="cv.pdf" class="download-btn">Download CV</a>
-            </div>
-            <div class="hero-image">
-                <img src="te.png" alt="Raed Guesmi">
-            </div>
+            <h2>Hello, I'm <span class="glitch">Raed Guesmi</span></h2>
+            <p>Cybersecurity Engineer specializing in penetration testing.</p>
+            <a href="cv.pdf" class="download-btn">Download CV</a>
         </section>
     </div>
-
+    
     <script>
         window.onload = function() {
             let thunderSound = document.getElementById("thunderSound");
+            setTimeout(() => thunderSound.play(), 1000);
 
-            // Play thunder sound after a slight delay
-            setTimeout(() => {
-                thunderSound.play();
-            }, 1000);
-
-            // Lightning Flash Effect
-            let flashes = [500, 1200, 2500]; // Random flash timings
-            flashes.forEach((time, index) => {
+            let flashes = [500, 1200, 2500];
+            flashes.forEach((time) => {
                 setTimeout(() => {
                     document.querySelector('.lightning').classList.add('flash');
                     setTimeout(() => {
@@ -67,14 +48,12 @@
                     }, 200);
                 }, time);
             });
-
-            // Hide preloader and show main content
+            
             setTimeout(() => {
                 document.querySelector('.preloader').style.display = 'none';
                 document.querySelector('.main-content').style.display = 'block';
             }, 3500);
         };
     </script>
-
 </body>
 </html>
