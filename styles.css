@@ -1,226 +1,53 @@
-/* General Styles */
-body {
-    background-color: #0a0a0a;
-    color: #f1f1f1;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-/* Container for better centering */
-.container {
-    width: 90%;
-    max-width: 1200px; /* Adjust the width to avoid extreme stretching */
-    margin: auto;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px; /* Reduced padding */
-    background: transparent;
+/* Preloader Styles */
+#preloader {
     position: fixed;
     width: 100%;
-    max-width: 1200px;
-    top: 0;
-    z-index: 1000;
-}
-.logo {
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-}
-.logo span {
+    height: 100vh;
+    background: #0a0a0a;
     color: #0ff;
-}
-nav ul {
-    list-style: none;
     display: flex;
-    gap: 20px; /* Reduced spacing */
-}
-nav ul li a {
-    color: #f1f1f1;
-    text-decoration: none;
-    font-size: 1em;
-    transition: 0.3s;
-}
-nav ul li a:hover, .active {
-    color: #0ff;
-}
-.hire-btn {
-    background: #0ff;
-    color: #000;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 1em;
-    margin-left: 15px; /* Closer to menu */
-}
-.hire-btn:hover {
-    background: #08f;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    padding: 80px 5%; /* Reduce padding for better centering */
-    flex-wrap: wrap;
-}
-.hero-content {
-    max-width: 50%;
-    text-align: left;
-}
-.hero h2 {
-    font-size: 2.8em; /* Reduced size slightly */
-    font-weight: bold;
-}
-.hero p {
-    font-size: 1.1em;
-    color: #ccc;
-    margin-bottom: 15px; /* Reduced margin */
-}
-
-/* Buttons & Social Icons */
-.buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Reduced gap */
-}
-.download-btn {
-    padding: 8px 16px;
-    background: #0ff;
-    color: #000;
-    border-radius: 5px;
-    font-size: 1em;
-    text-decoration: none;
-}
-.download-btn:hover {
-    background: #08f;
-}
-.social-icons {
-    display: flex;
-    gap: 8px; /* Reduced spacing */
-}
-.social-icons a {
-    color: #0ff;
-    font-size: 1.2em;
-    transition: 0.3s;
-}
-.social-icons a:hover {
-    color: #08f;
-    transform: scale(1.2);
-}
-
-/* Hero Image */
-.hero-image {
-    position: relative;
-    display: flex;
     justify-content: center;
-    width: 320px; /* Adjusted */
+    z-index: 10000;
+    animation: fadeOut 1.5s forwards 3s; /* Hide after 3s */
 }
-.hero-image img {
-    width: 100%;
+.loading-text {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #0ff;
+    border-top: 5px solid transparent;
     border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
-/* Animated Circle */
-.hero-image::before {
-    content: "";
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top: 3px solid #0ff;
-    border-right: 3px solid #0ff;
-    animation: rotateCircle 5s linear infinite;
-}
-@keyframes rotateCircle {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Hide content initially */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-in-out forwards 3s;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 120px;
-    }
-    .hero-content {
-        max-width: 90%;
-        text-align: center;
-    }
-    .hero h2 {
-        font-size: 2.3em;
-    }
-    .hero p {
-        font-size: 1em;
-    }
-    .buttons {
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .download-btn {
-        font-size: 1em;
-        padding: 8px 16px;
-    }
-    .social-icons {
-        justify-content: center;
-    }
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-    .hire-btn {
-        margin-left: 0;
-    }
-    .hero h2 {
-        font-size: 2em;
-    }
-    .hero p {
-        font-size: 0.9em;
-    }
-    .hero-image {
-        width: 260px;
-    }
+@keyframes fadeOut {
+    100% { opacity: 0; visibility: hidden; }
 }
-
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 1.8em;
-    }
-    .hero p {
-        font-size: 0.8em;
-    }
-    .download-btn {
-        font-size: 0.9em;
-        padding: 7px 14px;
-    }
-    .social-icons a {
-        font-size: 1.1em;
-    }
-    .hero-image {
-        width: 220px;
-    }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
