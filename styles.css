@@ -1,4 +1,4 @@
-/* Reset & General Styles */
+/* General Styles */
 body {
     background-color: #0a0a0a;
     color: #f1f1f1;
@@ -8,67 +8,54 @@ body {
     text-align: center;
 }
 
-/* Preloader */
-#preloader {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #0a0a0a;
-    color: #0ff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10000;
-}
-.loading-text {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-.loader {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #0ff;
-    border-top: 5px solid transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-/* Main Content Hidden Initially */
-#content {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-/* Navbar */
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 20px 50px;
+    background: transparent;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 .logo {
+    color: #fff;
     font-size: 28px;
     font-weight: bold;
+}
+.logo span {
+    color: #0ff;
 }
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 nav ul li a {
     color: #f1f1f1;
     text-decoration: none;
     font-size: 1.2em;
+    transition: 0.3s;
 }
-nav ul li a:hover {
+nav ul li a:hover, .active {
     color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+.hire-btn {
+    background: #0ff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.hire-btn:hover {
+    background: #08f;
 }
 
 /* Hero Section */
@@ -77,47 +64,42 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    padding: 80px 10%;
+    padding: 80px 10% 50px;
     text-align: left;
 }
 .hero-content {
     max-width: 50%;
+    text-align: left;
 }
 .hero h2 {
     font-size: 3.5em;
     margin: 10px 0;
     font-weight: bold;
 }
-.hero .name-highlight {
+.hero .highlight {
     color: #0ff;
 }
+.hero p {
+    font-size: 1.3em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
 .download-btn {
+    display: inline-block;
     padding: 12px 24px;
     background: #0ff;
     color: #000;
     border-radius: 5px;
     font-size: 1.2em;
     font-weight: bold;
+    transition: 0.3s;
     text-decoration: none;
 }
 .download-btn:hover {
     background: #08f;
 }
 
-/* Social Icons */
-.social-icons {
-    margin-top: 15px;
-}
-.social-icons a {
-    margin: 0 10px;
-    font-size: 1.5em;
-    color: #0ff;
-}
-.social-icons a:hover {
-    color: #08f;
-}
-
-/* Hero Image & Animation */
+/* Hero Image */
 .hero-image {
     position: relative;
     display: inline-block;
@@ -126,44 +108,12 @@ nav ul li a:hover {
     width: 350px;
     border-radius: 50%;
     border: 3px solid #0ff;
-}
-.circle-animation {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    border: 2px solid #0ff;
-    border-radius: 50%;
-    animation: rotateCircle 5s linear infinite;
-    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-@keyframes rotateCircle {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-    .hero-image img {
-        width: 250px;
-    }
+/* Name Animation */
+.animated-name {
+    color: #0ff;
+    font-weight: bold;
+    display: inline-block;
 }
