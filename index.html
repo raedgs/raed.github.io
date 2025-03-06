@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,37 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raed Guesmi - Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1 class="logo">Raed<span>.</span></h1>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#hire" class="hire-btn">Hire Me</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">Raed<span>.</span></div>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="hire-btn">Hire me</a>
+    </nav>
     
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="hero-content">
-            <p class="subtitle">Cybersecurity Engineer</p>
-            <h2>Hello, I’m <span class="highlight">Raed Guesmi</span></h2>
-            <p>I excel at penetration testing, network security, and ethical hacking.</p>
-            <a href="cv.pdf" class="btn">Download CV</a>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
+            <p>Cybersecurity Engineer</p>
+            <h2><span class="typing-text"></span></h2>
+            <p>I excel at crafting elegant digital experiences and specialize in cybersecurity, penetration testing, and network security.</p>
+            <a href="cv.pdf" class="download-btn">Download CV</a>
         </div>
         <div class="hero-image">
-            <img src="" alt="Raed Guesmi">
+            <img src="your-photo.jpg" alt="Raed Guesmi">
         </div>
     </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var typed = new Typed(".typing-text", {
+                strings: ["Hello I'm Raed Guesmi", "Bonjour, je suis Raed Guesmi"],
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 2000,
+                loop: true
+            });
+        });
+    </script>
 </body>
 </html>
