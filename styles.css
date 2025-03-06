@@ -84,6 +84,13 @@ nav ul li a:hover, .active {
     color: #ccc;
     margin-bottom: 20px;
 }
+
+/* Download CV & Social Icons */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 .download-btn {
     display: inline-block;
     padding: 12px 24px;
@@ -95,10 +102,62 @@ nav ul li a:hover, .active {
     transition: 0.3s;
     text-decoration: none;
 }
+.download-btn i {
+    margin-left: 5px;
+}
 .download-btn:hover {
     background: #08f;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons a {
+    color: #0ff;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: #08f;
+    transform: scale(1.2);
 }
 
 /* Hero Image */
 .hero-image {
     position: relative;
+    display: inline-block;
+}
+.hero-image img {
+    width: 350px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Animated Circular Border */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top: 3px solid #0ff;
+    border-right: 3px solid #0ff;
+    animation: rotateCircle 5s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+/* Circular Motion Animation */
+@keyframes rotateCircle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
