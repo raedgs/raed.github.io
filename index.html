@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- Preloader (Intro Animation) -->
+    <!-- Preloader -->
     <div id="preloader">
         <h1 class="loading-text">Welcome to My Portfolio</h1>
         <div class="loader"></div>
     </div>
 
-    <!-- Main Content (Hidden Initially) -->
-    <div id="content" class="hidden">
+    <!-- Main Content -->
+    <div id="content">
         
         <!-- Navbar -->
         <nav>
@@ -46,12 +47,21 @@
 
             <!-- Hero Image -->
             <div class="hero-image">
+                <div class="circle-animation"></div>
                 <img src="image.png" alt="Profile Image">
             </div>
         </section>
 
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("preloader").style.display = "none";
+                document.getElementById("content").style.opacity = "1";
+            }, 3000); // 3s delay
+        });
+    </script>
+
 </body>
 </html>
