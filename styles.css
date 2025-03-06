@@ -9,7 +9,7 @@ body {
     overflow: hidden;
 }
 
-/* Preloader (Scary Flashlight Animation) */
+/* Preloader (Thunder & Lightning Effect) */
 .preloader {
     position: fixed;
     width: 100%;
@@ -21,26 +21,17 @@ body {
     z-index: 10000;
 }
 
-.flashlight {
+/* Lightning Flash Effect */
+.lightning {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, rgba(0, 0, 0, 1) 60%);
-    animation: flicker 3s linear forwards;
+    height: 100vh;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
-
-/* Flickering Light Effect */
-@keyframes flicker {
-    0% { opacity: 0.1; }
-    10% { opacity: 0.4; }
-    20% { opacity: 0.2; }
-    30% { opacity: 0.6; }
-    40% { opacity: 0.3; }
-    50% { opacity: 0.7; }
-    60% { opacity: 0.2; }
-    70% { opacity: 0.8; }
-    80% { opacity: 0.3; }
-    90% { opacity: 1; }
-    100% { opacity: 0; }
+.lightning.flash {
+    opacity: 1;
 }
 
 /* Hide main content until preloader is gone */
