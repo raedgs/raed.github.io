@@ -113,21 +113,22 @@ nav ul li a:hover, .active {
 .hero-image::before {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 120%;
-    height: 120%;
-    border: 3px dashed cyan; /* خط متقطع */
+    top: 50%;
+    left: 50%;
+    width: 130%; /* Adjusted to ensure the circle is large enough */
+    height: 130%; /* Same as width for a perfect circle */
+    border: 3px dashed cyan;
     border-radius: 50%;
     animation: rotateCircle 5s linear infinite;
+    transform: translate(-50%, -50%); /* Ensures the circle is centered around the image */
 }
 
 /* Animated Circular Border */
 @keyframes rotateCircle {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
