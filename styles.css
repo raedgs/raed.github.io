@@ -102,39 +102,3 @@ nav ul li a:hover, .active {
 /* Hero Image */
 .hero-image {
     position: relative;
-    display: inline-block;
-}
-.hero-image img {
-    width: 350px;
-    border-radius: 50%;
-    border: 3px solid #0ff;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    filter: grayscale(100%);
-}
-
-/* Animated Circular Border */
-.hero-image::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 130%;
-    height: 130%;
-    border: 3px solid transparent;
-    background: radial-gradient(circle, rgba(0, 255, 255, 0.6) 0%, rgba(0, 255, 255, 0) 70%);
-    border-radius: 50%;
-    animation: rotateCircle 5s linear infinite;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.3);
-    filter: blur(2px);
-    opacity: 0.8;
-}
-
-@keyframes rotateCircle {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
