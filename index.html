@@ -8,10 +8,15 @@
 </head>
 <body>
 
-    <!-- Scary Light Preloader -->
+    <!-- Thunder & Lightning Preloader -->
     <div class="preloader">
-        <div class="flashlight"></div>
+        <div class="lightning"></div>
     </div>
+
+    <!-- Thunder Sound -->
+    <audio id="thunderSound">
+        <source src="thunder.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Main Portfolio -->
     <div class="main-content">
@@ -44,12 +49,30 @@
     </div>
 
     <script>
-        // Preloader effect
         window.onload = function() {
+            let thunderSound = document.getElementById("thunderSound");
+
+            // Play thunder sound after a slight delay
+            setTimeout(() => {
+                thunderSound.play();
+            }, 1000);
+
+            // Lightning Flash Effect
+            let flashes = [500, 1200, 2500]; // Random flash timings
+            flashes.forEach((time, index) => {
+                setTimeout(() => {
+                    document.querySelector('.lightning').classList.add('flash');
+                    setTimeout(() => {
+                        document.querySelector('.lightning').classList.remove('flash');
+                    }, 200);
+                }, time);
+            });
+
+            // Hide preloader and show main content
             setTimeout(() => {
                 document.querySelector('.preloader').style.display = 'none';
                 document.querySelector('.main-content').style.display = 'block';
-            }, 3500); // 3.5 seconds before showing the main content
+            }, 3500);
         };
     </script>
 
