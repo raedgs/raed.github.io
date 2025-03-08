@@ -130,6 +130,7 @@ nav {
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
 }
 
 .service i {
@@ -139,6 +140,7 @@ nav {
 }
 
 .service:hover {
+    transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.2);
 }
 
@@ -152,6 +154,7 @@ nav {
 #certifications h2 {
     font-size: 2.2em;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .certifications-container {
@@ -166,7 +169,8 @@ nav {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     text-align: center;
-    margin-bottom: 20px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
 }
 
 .certification i {
@@ -175,115 +179,98 @@ nav {
     margin-bottom: 10px;
 }
 
-.certification h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.certification:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Experience Section */
 #experience {
     padding: 80px 10%;
-    text-align: center;
-    background: #111;
-}
-
-#experience h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
 }
 
 .experience-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .experience-item {
-    width: 30%;
-    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.experience-item h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.experience-item p {
+    color: #ccc;
+}
+
+.experience-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Work Section */
 #work {
     padding: 80px 10%;
-    text-align: center;
     background: #111;
-}
-
-#work h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
 }
 
 .work-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .work-item {
-    width: 30%;
-    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.work-item h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.work-item p {
+    color: #ccc;
+}
+
+.work-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Contact Section */
 #contact {
     padding: 80px 10%;
     text-align: center;
-    background: #111;
-}
-
-#contact h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+    background: #222;
 }
 
 .contact-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .contact-link {
     color: #0ff;
     text-decoration: none;
     font-size: 1.2em;
-    margin: 10px;
     transition: color 0.3s;
 }
 
 .contact-link:hover {
     color: #fff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        order: 2;
-    }
-
-    .hero-image {
-        order: 1;
-    }
-
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service, .certification, .experience-item, .work-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
 }
