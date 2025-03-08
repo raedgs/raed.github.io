@@ -37,26 +37,46 @@
     </section>
 
     <!-- Services Section -->
+      <!-- Services Section -->
     <section id="services">
         <h2>My Services</h2>
         <div class="services-container">
-            <div class="service">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Penetration Testing</h3>
-                <p>Identify and fix vulnerabilities in your network.</p>
+            <div class="service-card">
+                <div class="service-front">
+                    <h3>Penetration Testing</h3>
+                </div>
+                <div class="service-back">
+                    <p>Penetration Testing is a simulated cyber attack on your system to find vulnerabilities before hackers can exploit them.</p>
+                </div>
             </div>
-            <div class="service">
-                <i class="fas fa-network-wired"></i>
-                <h3>Network Security</h3>
-                <p>Protect your network against cyber threats.</p>
+            <div class="service-card">
+                <div class="service-front">
+                    <h3>Network Security</h3>
+                </div>
+                <div class="service-back">
+                    <p>Protect your network from cyber threats with robust network security measures, ensuring your data remains secure.</p>
+                </div>
             </div>
-            <div class="service">
-                <i class="fas fa-code"></i>
-                <h3>Security Audits</h3>
-                <p>Comprehensive security assessments for your business.</p>
+            <div class="service-card">
+                <div class="service-front">
+                    <h3>Security Audits</h3>
+                </div>
+                <div class="service-back">
+                    <p>Comprehensive security assessments to identify vulnerabilities in your infrastructure, applications, and processes.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Change text dynamically every 3 seconds
+        const textOptions = ["Cybersecurity Engineer", "Penetration Tester", "Network Security Expert"];
+        let index = 0;
+        setInterval(() => {
+            document.getElementById("changing-text").textContent = textOptions[index];
+            index = (index + 1) % textOptions.length;
+        }, 3000);
+    </script>
 
     <!-- Certifications Section -->
     <section id="certifications">
