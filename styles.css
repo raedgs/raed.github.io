@@ -5,7 +5,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 /* Navigation */
@@ -46,10 +45,15 @@ nav {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
+    padding: 0 10%;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
 }
 
 .hero h1 {
@@ -58,7 +62,6 @@ nav {
     color: #fff;
 }
 
-/* Dynamic text */
 #changing-text {
     color: #0ff; /* Same color as "Download CV" */
     font-size: 1em;
@@ -69,6 +72,19 @@ nav {
 .hero p {
     font-size: 1.2em;
     margin-top: 10px;
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 400px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
 }
 
 /* Buttons */
@@ -110,48 +126,4 @@ nav {
 
 .hire-btn:hover {
     background: #e68900;
-}
-
-/* Services Section */
-.services {
-    padding: 50px 20px;
-}
-
-.services h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-}
-
-.service-box {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.service {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.service:hover {
-    transform: scale(1.05);
-}
-
-.service i {
-    font-size: 30px;
-    color: #0ff;
-}
-
-.service h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
-}
-
-.service p {
-    font-size: 1em;
-    margin-top: 10px;
 }
