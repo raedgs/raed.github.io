@@ -21,22 +21,23 @@ nav {
     z-index: 1000;
 }
 
+/* Logo on the left */
 .logo {
     color: #fff;
     font-size: 28px;
     font-weight: bold;
 }
-.logo span {
-    color: #0ff;
-}
 
+/* Centering the navigation links */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
-    align-items: center;
-    margin: 0;
+    gap: 30px;
+    margin: 0 auto;
     padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav ul li {
@@ -58,84 +59,109 @@ nav ul li a.active {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 80px 10% 50px;
-    text-align: left;
-}
-
-/* Hire Me Section */
-.hire-section {
-    background: #111;
-    padding: 100px 20px;
+    padding: 80px 10%;
     text-align: center;
 }
 
-.hire-section h2 {
+.hero p {
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+/* Typing Text Animation */
+.typing-text {
     font-size: 2em;
+    font-weight: bold;
     color: #0ff;
 }
 
-.hire-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+/* Hero Image */
+.hero-image img {
+    width: 250px;
+    border-radius: 50%;
+    border: 3px solid #0ff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.download-btn, 
 .hire-btn {
+    display: inline-block;
+    padding: 12px 24px;
     background: #0ff;
     color: #000;
-    padding: 12px 24px;
     border-radius: 5px;
     font-size: 1.2em;
     font-weight: bold;
-    text-decoration: none;
     transition: 0.3s;
+    text-decoration: none;
 }
 
+.download-btn:hover, 
 .hire-btn:hover {
     background: #08f;
 }
 
-/* Services Section */
-.services-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 40px 0;
-}
-
-.service {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-}
-
-.service i {
-    font-size: 2em;
-    color: #0ff;
-}
-
-.service h3 {
-    margin-top: 10px;
-}
-
-/* Sections */
-.section {
-    padding: 100px 20px;
-}
-
-.contact-btn {
-    background: #0ff;
+/* Hire Me Button - Centered */
+.hire-btn {
+    margin-top: 40px;
+    background: #ff0;
     color: #000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-.contact-btn:hover {
-    background: #08f;
+.hire-btn:hover {
+    background: #fc0;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #0ff;
+    font-size: 1.8em;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #08f;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero-image img {
+        width: 200px;
+    }
 }
