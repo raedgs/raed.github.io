@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raed Guesmi - Cybersecurity Portfolio</title>
+    <title>Raed Guesmi - Cybersecurity Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KEY.js" crossorigin="anonymous"></script>
 </head>
@@ -11,20 +11,21 @@
 
     <!-- Navigation -->
     <nav>
-        <div class="logo">Raed<span class="highlight"> Guesmi</span><span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Hello, I'm <span>Raed Guesmi</span></h1>
+            <h1>Hello, I'm <span id="changing-text">Raed Guesmi</span></h1>
             <p>Cybersecurity Engineer | Penetration Tester | Network Security Expert</p>
             <div class="buttons">
                 <a href="Cv_Raed.Guesmi.pdf" class="download-btn" download>Download CV <i class="fas fa-download"></i></a>
@@ -43,24 +44,34 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <h2>My Services</h2>
-        <div class="service-list">
-            <div class="service-item">
+        <div class="service-box">
+            <div class="service">
                 <i class="fas fa-shield-alt"></i>
                 <h3>Penetration Testing</h3>
-                <p>Identifying and mitigating vulnerabilities in networks and web applications.</p>
+                <p>Identify and fix security vulnerabilities in networks, systems, and applications.</p>
             </div>
-            <div class="service-item">
-                <i class="fas fa-lock"></i>
-                <h3>Cybersecurity Consulting</h3>
-                <p>Helping businesses enhance security posture and compliance.</p>
-            </div>
-            <div class="service-item">
+            <div class="service">
                 <i class="fas fa-network-wired"></i>
                 <h3>Network Security</h3>
-                <p>Configuring firewalls and securing corporate infrastructures.</p>
+                <p>Implement strong firewall rules, IDS/IPS, and secure network configurations.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-user-secret"></i>
+                <h3>Cyber Threat Analysis</h3>
+                <p>Analyze threats, detect anomalies, and prevent security breaches.</p>
             </div>
         </div>
     </section>
+
+    <script>
+        // Change text dynamically every 3 seconds
+        const textOptions = ["Raed Guesmi", "Cybersecurity Engineer"];
+        let index = 0;
+        setInterval(() => {
+            document.getElementById("changing-text").textContent = textOptions[index];
+            index = (index + 1) % textOptions.length;
+        }, 3000);
+    </script>
 
 </body>
 </html>
