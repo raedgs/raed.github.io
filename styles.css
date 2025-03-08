@@ -74,17 +74,42 @@ nav {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Hero Image */
+/* Hero Image Container */
 .hero-image {
-    flex: 1;
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+/* Rotating Dashed Circle */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 420px; /* Slightly larger than the image */
+    height: 420px;
+    border-radius: 50%;
+    border: 4px dashed rgba(0, 255, 255, 0.8); /* Professional cyan/blue color */
+    animation: rotateCircle 8s linear infinite; /* Smooth infinite rotation */
+}
+
+/* Keyframes for Rotation Animation */
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Ensure the Image is Well-Placed */
 .hero-image img {
     width: 350px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 50%; /* Rounded image for a sleek look */
+    position: relative;
+    z-index: 2;
 }
 
 /* Buttons */
