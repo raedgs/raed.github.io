@@ -25,8 +25,8 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-text">
-            <h1>Hello, I'm <span id="changing-text">Raed Guesmi</span></h1>
-            <p>Cybersecurity Engineer | Penetration Tester | Network Security Expert</p>
+            <h1>Hello, I'm <span class="highlight">Raed Guesmi</span></h1>
+            <p id="changing-text">Cybersecurity Engineer</p>
             <div class="buttons">
                 <a href="Cv_Raed.Guesmi.pdf" class="download-btn" download>Download CV <i class="fas fa-download"></i></a>
             </div>
@@ -36,14 +36,31 @@
         </div>
     </section>
 
-    <!-- Hire Me Section -->
-    <section class="hire-me">
-        <a href="#contact" class="hire-btn">Hire Me</a>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Penetration Testing</h3>
+                <p>Identify and fix vulnerabilities in your network.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-network-wired"></i>
+                <h3>Network Security</h3>
+                <p>Protect your network against cyber threats.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-code"></i>
+                <h3>Security Audits</h3>
+                <p>Comprehensive security assessments for your business.</p>
+            </div>
+        </div>
     </section>
 
     <script>
         // Change text dynamically every 3 seconds
-        const textOptions = ["Raed Guesmi", "Cybersecurity Engineer"];
+        const textOptions = ["Cybersecurity Engineer", "Penetration Tester", "Network Security Expert"];
         let index = 0;
         setInterval(() => {
             document.getElementById("changing-text").textContent = textOptions[index];
