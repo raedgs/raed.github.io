@@ -55,22 +55,6 @@ nav ul li a.active {
     color: #0ff;
 }
 
-/* Hire Me Button */
-.hire-btn {
-    background: #0ff;
-    color: #000;
-    padding: 8px 18px;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.hire-btn:hover {
-    background: #08f;
-}
-
 /* Hero Section */
 .hero {
     display: flex;
@@ -81,55 +65,77 @@ nav ul li a.active {
     text-align: left;
 }
 
-.hero-content {
-    max-width: 50%;
+/* Hire Me Section */
+.hire-section {
+    background: #111;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-.hero p {
-    font-size: 1.3em;
-    color: #ccc;
+.hire-section h2 {
+    font-size: 2em;
+    color: #0ff;
 }
 
-.download-btn {
-    display: inline-block;
-    padding: 12px 24px;
+.hire-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hire-btn {
     background: #0ff;
     color: #000;
+    padding: 12px 24px;
     border-radius: 5px;
     font-size: 1.2em;
     font-weight: bold;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-.download-btn:hover {
+.hire-btn:hover {
     background: #08f;
 }
 
-/* Social Icons */
-.social-icons {
-    margin-top: 20px;
+/* Services Section */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 0;
 }
 
-.social-icons a {
-    font-size: 1.5em;
+.service {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.service i {
+    font-size: 2em;
     color: #0ff;
-    margin: 0 10px;
-    transition: 0.3s;
 }
 
-.social-icons a:hover {
-    color: #08f;
+.service h3 {
+    margin-top: 10px;
 }
 
-/* Hero Image */
-.hero-image {
-    position: relative;
-    display: inline-block;
+/* Sections */
+.section {
+    padding: 100px 20px;
 }
 
-.hero-image img {
-    width: 350px;
-    border-radius: 50%;
-    border: 3px solid #0ff;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+.contact-btn {
+    background: #0ff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contact-btn:hover {
+    background: #08f;
 }
