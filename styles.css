@@ -82,14 +82,15 @@ nav {
     align-items: center;
 }
 
-/* Rotating Dashed Circle */
+/* More Dashed Rotating Circle */
 .hero-image::before {
     content: "";
     position: absolute;
     width: 420px; /* Slightly larger than the image */
     height: 420px;
     border-radius: 50%;
-    border: 4px dashed rgba(0, 255, 255, 0.8); /* Professional cyan/blue color */
+    border: 4px dashed rgba(0, 255, 255, 0.9); /* Brighter cyan for visibility */
+    border-spacing: 10px; /* More spaced-out dashes */
     animation: rotateCircle 8s linear infinite; /* Smooth infinite rotation */
 }
 
@@ -111,6 +112,7 @@ nav {
     position: relative;
     z-index: 2;
 }
+
 
 /* Buttons */
 .buttons {
