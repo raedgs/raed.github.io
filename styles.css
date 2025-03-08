@@ -107,42 +107,74 @@ nav {
 }
 
 /* Services Section */
+/* Services Section */
 #services {
     padding: 80px 10%;
     text-align: center;
+    background: #111;
 }
 
 #services h2 {
     font-size: 2.2em;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .services-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-.service {
-    width: 30%;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+/* Service Cards */
+.service-card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.service-card .service-front,
+.service-card .service-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
     box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.6s;
 }
 
-.service i {
-    font-size: 2.5em;
-    color: #0ff;
-    margin-bottom: 10px;
+/* Front Side */
+.service-card .service-front {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.service:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.2);
+/* Back Side */
+.service-card .service-back {
+    background: rgba(0, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    padding: 10px;
+    text-align: center;
+    transform: rotateY(180deg);
 }
+
+/* Flip effect */
+.service-card:hover .service-front {
+    transform: rotateY(180deg);
+}
+
+.service-card:hover .service-back {
+    transform: rotateY(0deg);
+}
+
 
 /* Certifications Section */
 #certifications {
