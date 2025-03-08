@@ -13,6 +13,14 @@ body {
     gap: 15px;
     justify-content: center;
 }
+.testimonial {
+    background: #1d1d1d;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
 
 /* Default Button Style */
 .social-btn {
