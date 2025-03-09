@@ -115,7 +115,7 @@
             
                 <p> eLearnSecurity Certified Professional Penetration Tester</p>
                              <a href="https://certs.ine.com/8dd75524-f315-44c4-8e19-7e0268cef492#acc.rv6opEJh" target="_blank">
- <button class="verify-button">Verify Certification</button>
+  <button class="verify-button">Verify Certification</button>
 </a>
 
 <style>
@@ -132,13 +132,13 @@
     overflow: hidden;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0 0 10px rgba(26, 115, 232, 0.5); /* Soft initial glow */
+    box-shadow: 0 0 10px rgba(26, 115, 232, 0.5); /* Soft initial glow with blue */
     transition: all 0.3s ease;
   }
 
   .verify-button:hover {
     background-color: #0d5bb7; /* Darker blue on hover */
-    box-shadow: 0 0 20px rgba(26, 115, 232, 0.9), 0 0 30px rgba(26, 115, 232, 0.7); /* Stronger glowing effect */
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.9), 0 0 30px rgba(52, 211, 153, 0.7); /* Stronger greenish cyan glow */
     transform: scale(1.05); /* Slightly increase button size */
   }
 
@@ -149,11 +149,11 @@
     left: 50%;
     width: 300%;
     height: 300%;
-    background-color: #ffffff;
+    background-color: transparent;
     transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White glow effect */
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.8); /* Greenish cyan glow effect */
   }
 
   .verify-button:hover::before {
@@ -166,19 +166,19 @@
   /* Keyframe animation for continuous shining */
   @keyframes shine {
     0% {
-      box-shadow: 0 0 10px rgba(26, 115, 232, 0.5), 0 0 15px rgba(26, 115, 232, 0.5);
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.5), 0 0 15px rgba(52, 211, 153, 0.5); /* Initial cyan glow */
     }
     50% {
-      box-shadow: 0 0 20px rgba(26, 115, 232, 0.9), 0 0 25px rgba(26, 115, 232, 0.7);
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.9), 0 0 25px rgba(52, 211, 153, 0.7); /* Stronger glow */
     }
     100% {
-      box-shadow: 0 0 10px rgba(26, 115, 232, 0.5), 0 0 15px rgba(26, 115, 232, 0.5);
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.5), 0 0 15px rgba(52, 211, 153, 0.5); /* Return to initial glow */
     }
   }
 
   /* Apply the shine effect */
   .verify-button {
-    animation: shine 2s infinite; /* Continuous shining effect */
+    animation: shine 2s infinite; /* Continuous cyan glowing effect */
   }
 </style>
             </div>
