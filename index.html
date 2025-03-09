@@ -26,15 +26,81 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <h1>Hello, I'm <span class="highlight">Raed Guesmi</span></h1>
-            <p id="changing-text">Cybersecurity Engineer</p>
-            <div class="buttons">
-               <a href="Cv_Raed.Guesmi.pdf" class="download-btn" download>
-    Download CV <i class="fas fa-download"></i>
-</a>
- </div>
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Hello, I'm <span class="highlight">Raed Guesmi</span></h1>
+        <p id="changing-text">I'm a <span class="dynamic-text"></span></p>
+        <div class="buttons">
+            <a href="Cv_Raed.Guesmi.pdf" class="download-btn" download>
+                Download CV <i class="fas fa-download"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CSS -->
+<style>
+    .hero {
+        text-align: center;
+        color: white;
+        background-color: #121212;
+        padding: 100px 20px;
+    }
+
+    .highlight {
+        color: white;
+        font-weight: bold;
+    }
+
+    .dynamic-text {
+        font-weight: bold;
+        color: #32CD32; /* Green text color */
+        border-right: 3px solid white; /* Blinking cursor effect */
+        padding-right: 5px;
+        animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    const roles = ["Cybersecurity Engineer", "Penetration Tester", "DevSecOps Specialist"];
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const dynamicTextElement = document.querySelector(".dynamic-text");
+
+    function typeEffect() {
+        let currentRole = roles[index];
+        if (isDeleting) {
+            dynamicTextElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            dynamicTextElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            setTimeout(() => (isDeleting = true), 1000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            index = (index + 1) % roles.length;
+        }
+
+        setTimeout(typeEffect, isDeleting ? 100 : 150);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        typeEffect();
+    });
+</script>
+
             
           <!-- Social Links Section -->
 <!-- Social Links Section -->
