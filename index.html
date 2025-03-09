@@ -105,8 +105,72 @@
             <h3>eJPT <img src="ejpt.png" alt="ecppt Logo" class="cert-logo" style="width: 130px; height: auto;"> </h3>
 <p>eLearnSecurity Junior Penetration Tester</p>
 <a href="https://certs.ine.com/1cebe1a3-34f7-4344-af68-76af0930645c#acc.v8U5KRVW" target="_blank">
-  <button style="padding: 5px 10px; font-size: 14px; cursor: pointer;">Verify Certification</button>
+   <button class="verify-button">Verify Certification</button>
 </a>
+
+<style>
+  .verify-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #1a73e8; /* Professional blue */
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(26, 115, 232, 0.5); /* Soft initial glow with blue */
+    transition: all 0.3s ease;
+  }
+
+  .verify-button:hover {
+    background-color: #0d5bb7; /* Darker blue on hover */
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.9), 0 0 30px rgba(52, 211, 153, 0.7); /* Stronger greenish cyan glow */
+    transform: scale(1.05); /* Slightly increase button size */
+  }
+
+  .verify-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: transparent;
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.8); /* Greenish cyan glow effect */
+  }
+
+  .verify-button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+  }
+
+  /* Keyframe animation for continuous shining */
+  @keyframes shine {
+    0% {
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.5), 0 0 15px rgba(52, 211, 153, 0.5); /* Initial cyan glow */
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.9), 0 0 25px rgba(52, 211, 153, 0.7); /* Stronger glow */
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.5), 0 0 15px rgba(52, 211, 153, 0.5); /* Return to initial glow */
+    }
+  }
+
+  /* Apply the shine effect */
+  .verify-button {
+    animation: shine 2s infinite; /* Continuous cyan glowing effect */
+  }
+</style>
               
             </div>
            <div class="certification">
