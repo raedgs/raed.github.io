@@ -88,6 +88,82 @@
                 </div>
             </div>
         </div>
+      <!-- CSS -->
+<style>
+    /* General Section Styling */
+    #services {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #121212;
+        color: white;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .services-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* Service Card Styling */
+    .service-card {
+        width: 300px;
+        height: 180px;
+        background: #1d1d1d;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .service-card:hover {
+        transform: scale(1.05);
+    }
+
+    .service-front h3 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .service-back {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    /* Animated Border Effect */
+    .service-card::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(90deg, #00ffcc, #00ff66, #ffcc00, #ff0066);
+        background-size: 400%;
+        z-index: -1;
+        border-radius: 12px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        animation: borderAnimation 6s infinite linear;
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+    }
+
+    @keyframes borderAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+</style>
     </section>
 
     <script>
