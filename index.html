@@ -89,6 +89,7 @@
             </div>
         </div>
       <!-- CSS -->
+<!-- CSS -->
 <style>
     /* General Section Styling */
     #services {
@@ -137,31 +138,29 @@
         margin-top: 10px;
     }
 
-    /* Animated Border Effect */
+    /* Moving Light Border Effect */
     .service-card::before {
         content: "";
         position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: linear-gradient(90deg, #00ffcc, #00ff66, #ffcc00, #ff0066);
-        background-size: 400%;
-        z-index: -1;
-        border-radius: 12px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        animation: borderAnimation 6s infinite linear;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background: linear-gradient(90deg, rgba(0, 255, 255, 0.5), rgba(255, 0, 255, 0.5)) border-box;
+        mask: linear-gradient(90deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+        -webkit-mask: linear-gradient(90deg, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+        animation: borderMove 2s linear infinite;
     }
 
-    .service-card:hover::before {
-        opacity: 1;
-    }
-
-    @keyframes borderAnimation {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+    @keyframes borderMove {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
     }
 </style>
     </section>
