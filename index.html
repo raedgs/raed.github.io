@@ -115,7 +115,7 @@
             
                 <p> eLearnSecurity Certified Professional Penetration Tester</p>
                              <a href="https://certs.ine.com/8dd75524-f315-44c4-8e19-7e0268cef492#acc.rv6opEJh" target="_blank">
-  <button class="verify-button">Verify Certification</button>
+ <button class="verify-button">Verify Certification</button>
 </a>
 
 <style>
@@ -130,7 +130,16 @@
     outline: none;
     position: relative;
     overflow: hidden;
-    transition: background-color 0.4s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(26, 115, 232, 0.5); /* Soft initial glow */
+    transition: all 0.3s ease;
+  }
+
+  .verify-button:hover {
+    background-color: #0d5bb7; /* Darker blue on hover */
+    box-shadow: 0 0 20px rgba(26, 115, 232, 0.9), 0 0 30px rgba(26, 115, 232, 0.7); /* Stronger glowing effect */
+    transform: scale(1.05); /* Slightly increase button size */
   }
 
   .verify-button::before {
@@ -144,10 +153,7 @@
     transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  .verify-button:hover {
-    background-color: #0d5bb7; /* Darker blue on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White glow effect */
   }
 
   .verify-button:hover::before {
@@ -155,6 +161,24 @@
     height: 0;
     top: 50%;
     left: 50%;
+  }
+
+  /* Keyframe animation for continuous shining */
+  @keyframes shine {
+    0% {
+      box-shadow: 0 0 10px rgba(26, 115, 232, 0.5), 0 0 15px rgba(26, 115, 232, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(26, 115, 232, 0.9), 0 0 25px rgba(26, 115, 232, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(26, 115, 232, 0.5), 0 0 15px rgba(26, 115, 232, 0.5);
+    }
+  }
+
+  /* Apply the shine effect */
+  .verify-button {
+    animation: shine 2s infinite; /* Continuous shining effect */
   }
 </style>
             </div>
