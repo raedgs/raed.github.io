@@ -27,6 +27,7 @@
 
     <!-- Hero Section -->
 <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="hero" id="home">
     <div class="hero-text">
         <h1>Hello, I'm <span class="highlight">Raed Guesmi</span></h1>
@@ -35,6 +36,12 @@
             <a href="Cv_Raed.Guesmi.pdf" class="download-btn" download>
                 Download CV <i class="fas fa-download"></i>
             </a>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://tryhackme.com/p/yourtryhackme" target="_blank"><i class="fas fa-user-secret"></i></a>
+            <a href="https://www.linkedin.com/in/yourlinkedin/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </div>
 </section>
@@ -55,8 +62,8 @@
 
     .dynamic-text {
         font-weight: bold;
-        color: #32CD32; /* Green text color */
-        border-right: 3px solid white; /* Blinking cursor effect */
+        color: #32CD32; /* Green text */
+        border-right: 3px solid white; /* Blinking cursor */
         padding-right: 5px;
         animation: blink 0.8s infinite;
     }
@@ -66,9 +73,41 @@
             border-color: transparent;
         }
     }
+
+    .download-btn {
+        display: inline-block;
+        background-color: #32CD32;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .download-btn:hover {
+        background-color: #28a428;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 24px;
+        color: #32CD32;
+        transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: white;
+        transform: scale(1.1);
+    }
 </style>
 
-<!-- JavaScript -->
+<!-- JavaScript (Typing Effect) -->
 <script>
     const roles = ["Cybersecurity Engineer", "Penetration Tester", "DevSecOps Specialist"];
     let index = 0;
@@ -100,6 +139,7 @@
         typeEffect();
     });
 </script>
+
 
             
           <!-- Social Links Section -->
