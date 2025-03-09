@@ -89,7 +89,7 @@
 
     <script>
         // Change text dynamically every 3 seconds
-        const textOptions = ["Cybersecurity Engineer", "Penetration Tester", "Network Security Expert"];
+        const textOptions = ["Cybersecurity Engineer", "Penetration Tester", "Web Developper"];
         let index = 0;
         setInterval(() => {
             document.getElementById("changing-text").textContent = textOptions[index];
@@ -315,40 +315,91 @@
     <section id="experience">
         <h2>Experience</h2>
         <div class="experience-container">
-           <div class="experience-item">
-                <h3>Penetration Tester at SFM Group  <img src="sfm.png" alt="eJPT Logo" class="cert-logo" style="width: 110px; height: auto;"></h3>
-                <p><em>01/02/2024 - 01/08/2024</em></p>
-                <p>Performed web penetration testing, server backup testing, and developed a cybersecurity education platform.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Cybersecurity Analyst Internship at Next Step  <img src="next.png" alt="eJPT Logo" class="cert-logo" style="width: 110px; height: auto;"></h3>
-                <p><em>01/05/2023 - 01/08/2023</em></p>
-                <p>Configured firewalls, analyzed network traffic using Wireshark, and detected vulnerabilities.</p>
-            </div>
-           
-           <div class="experience-item">
-                <h3>Web Developer and Security at Green.tech  <img src="green.png" alt="eJPT Logo" class="cert-logo" style="width: 120px; height: auto;"></h3>  
-<p><em>01/05/2023 - 01/08/2023</em></p>  
-<p>Developed and secured web applications using the MERN stack, implemented authentication systems, and conducted vulnerability assessments.</p>  
-           </div>
+         <div class="experience-item">
+    <h3>Penetration Tester at SFM Group <img src="sfm.png" alt="eJPT Logo" class="cert-logo" style="width: 110px; height: auto;"></h3>
+    <p><em>01/02/2024 - 01/08/2024</em></p>
+    <p>As a Penetration Tester at SFM Group, I conducted extensive penetration testing across multiple platforms, including websites, servers, and Active Directory configurations. I identified critical vulnerabilities such as Cross-Site Scripting (XSS), SQL Injection, and weak server configurations, which were later addressed to enhance security.</p>
+    <p>In addition to web penetration testing, I also performed <strong>Active Directory penetration testing</strong> to identify potential privilege escalation paths and unauthorized access points. This helped improve the organization's identity and access management practices.</p>
+    <p>Key Achievements:</p>
+    <ul>
+        <li>Conducted vulnerability assessments for SFM's web applications and infrastructure, identifying and reporting multiple vulnerabilities.</li>
+        <li>Developed a platform for cybersecurity training with Capture The Flag (CTF) challenges to help improve the skills of the internal team and other cybersecurity professionals.</li>
+        <li>Worked closely with the IT and security teams to ensure effective remediation of discovered vulnerabilities and the strengthening of the overall security posture.</li>
+    </ul>
+</div>
+
+<div class="experience-item">
+    <h3>Cybersecurity Analyst Internship at Next Step <img src="next.png" alt="eJPT Logo" class="cert-logo" style="width: 110px; height: auto;"></h3>
+    <p><em>01/05/2023 - 01/08/2023</em></p>
+    <p>During my internship at Next Step, I focused on analyzing network traffic, identifying threats, and enhancing the overall security posture of the organization. I configured firewalls and implemented security measures to prevent unauthorized access, ensuring that the organization's network remained protected.</p>
+    <p>Key Achievements:</p>
+    <ul>
+        <li>Configured and managed firewalls, ensuring proper security rules and logging to protect the organization’s network from external threats.</li>
+        <li>Analyzed network traffic using tools like Wireshark to identify abnormal activity and vulnerabilities in network protocols.</li>
+        <li>Collaborated with senior cybersecurity professionals to implement security best practices, including patch management and vulnerability scanning.</li>
+    </ul>
+</div>
+
+<div class="experience-item">
+    <h3>Web Developer and Security at Green.tech <img src="green.png" alt="eJPT Logo" class="cert-logo" style="width: 120px; height: auto;"></h3>
+    <p><em>01/05/2023 - 01/08/2023</em></p>
+    <p>At Green.tech, I developed and secured web applications using the MERN stack (MongoDB, Express.js, React, Node.js). My responsibilities included implementing robust authentication and authorization systems, ensuring data security, and performing vulnerability assessments to detect and mitigate security risks.</p>
+    <p>Key Achievements:</p>
+    <ul>
+        <li>Developed secure web applications using the MERN stack, with a focus on performance, scalability, and security.</li>
+        <li>Implemented multi-factor authentication (MFA) and other security measures such as input validation and password hashing to protect user data.</li>
+        <li>Conducted regular vulnerability assessments and penetration testing on web applications to ensure they were secure from potential attacks like Cross-Site Scripting (XSS) and SQL Injection.</li>
+    </ul>
+</div>
 
         </div>
     </section>
 
     <!-- Work Section -->
-    <section id="work">
-        <h2>My Work</h2>
-        <div class="work-container">
-            <div class="work-item">
-                <h3>Project: Penetration Testing Labs</h3>
-                <p>Developed a platform for penetration testing challenges with real-world scenarios to enhance security skills.</p>
-            </div>
-            <div class="work-item">
-                <h3>Project: Cybersecurity Platform</h3>
-                <p>Created a comprehensive platform for penetration testing and security awareness training.</p>
-            </div>
+  <section id="work">
+    <h2>My Projects</h2>
+    <div class="work-container">
+        <div class="work-item">
+            <h3>FortiLearn Platform <img src="forti.png" alt="FortiLearn Logo" class="cert-logo" style="width: 120px; height: auto;"></h3>
+            <p><strong>Description:</strong> FortiLearn is a cybersecurity training platform I developed that features penetration testing challenges designed to simulate real-world security scenarios. It helps individuals and organizations improve their cybersecurity skills through hands-on labs, including common vulnerabilities and attack vectors like XSS, SQL Injection, and privilege escalation.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Interactive labs with real-world attack and defense scenarios</li>
+                <li>Points and ranking system to track progress and skills development</li>
+                <li>Simulated environments for web and network penetration testing</li>
+                <li>Integration of various penetration testing tools like Metasploit, Burp Suite, and Nmap</li>
+            </ul>
+            <p><strong>Technologies Used:</strong> JavaScript, Node.js, Express.js, MongoDB, React, Docker, Kali Linux, and penetration testing tools.</p>
         </div>
-    </section>
+
+        <div class="work-item">
+            <h3>Next Generation SOC for Banking</h3>
+            <p><strong>Description:</strong> I designed and developed a comprehensive platform aimed at enhancing security operations within the banking sector. The platform integrates automated penetration testing, vulnerability assessments, and security awareness training to help financial institutions better protect their assets and customer data.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Security automation for continuous penetration testing and vulnerability scanning</li>
+                <li>Real-time threat detection and incident response capabilities</li>
+                <li>Security awareness modules tailored to banking professionals</li>
+                <li>Compliance with banking regulations (GDPR, PCI DSS, etc.)</li>
+            </ul>
+            <p><strong>Technologies Used:</strong> Python, Flask, Docker, Jenkins, Terraform, Splunk, and security testing tools.</p>
+        </div>
+
+        <div class="work-item">
+            <h3>DevSecOps Implementation for Journy Academy</h3>
+            <p><strong>Description:</strong> As part of my journey with Journy Academy, I implemented a DevSecOps pipeline to integrate security into every phase of the development lifecycle. The pipeline automates security testing and vulnerability scanning for code and infrastructure, ensuring secure software delivery and continuous monitoring.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Automated security testing of applications using tools like Snyk and SonarQube</li>
+                <li>Continuous integration/continuous deployment (CI/CD) with integrated security checks</li>
+                <li>Infrastructure as Code (IaC) security with Terraform and AWS security best practices</li>
+                <li>Automated vulnerability scanning for Docker containers and Kubernetes clusters</li>
+            </ul>
+            <p><strong>Technologies Used:</strong> Jenkins, Terraform, Docker, Kubernetes, AWS, Snyk, SonarQube, and GitLab CI/CD.</p>
+        </div>
+    </div>
+</section>
+
 <section id="testimonials">
     <h2>What People Say</h2>
     <div class="testimonial">
@@ -358,16 +409,7 @@
 </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-container">
-            <a href="mailto:raedguesmi@example.com" class="contact-link">Email</a>
-            <a href="https://github.com/raedguesmi" class="contact-link">GitHub</a>
-            <a href="https://www.linkedin.com/in/raedguesmi" class="contact-link">LinkedIn</a>
-            <a href="https://facebook.com/raedguesmi" class="contact-link">Facebook</a>
-        </div>
-    </section>
-
+  
     <script>
         // Change text dynamically every 3 seconds
         const textOptions = ["Cybersecurity Engineer", "Penetration Tester", "Network Security Expert"];
