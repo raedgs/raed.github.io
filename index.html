@@ -111,12 +111,52 @@
             </div>
            <div class="certification">
                 <i class="fas fa-certificate"></i>
-                <h3>eCPPT  <img src="ecppt.png" alt="eJPT Logo" class="cert-logo" style="width: 130px; height: auto;> </h3>
+                <h3>eCPPT  <img src="ecppt.png" alt="eJPT Logo" class="cert-logo" style="width: 130px; height: auto;"> </h3>
             
                 <p> eLearnSecurity Certified Professional Penetration Tester</p>
                              <a href="https://certs.ine.com/8dd75524-f315-44c4-8e19-7e0268cef492#acc.rv6opEJh" target="_blank">
-  <button style="padding: 5px 10px; font-size: 14px; cursor: pointer;">Verify Certification</button>
+  <button class="verify-button">Verify Certification</button>
 </a>
+
+<style>
+  .verify-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #1a73e8; /* Professional blue */
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.4s ease;
+  }
+
+  .verify-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #ffffff;
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .verify-button:hover {
+    background-color: #0d5bb7; /* Darker blue on hover */
+  }
+
+  .verify-button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+  }
+</style>
             </div>
             <div class="certification">
                 <i class="fas fa-certificate"></i>
